@@ -63,6 +63,12 @@
         })();
         </script><link rel="icon" href="bzh.png" type="image/x-icon">
 
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet"> 
+
 <meta property="og:title" content="buzhub - a6b - Az do granicy" />
 
 <style>
@@ -80,6 +86,132 @@
 }
 }
 
+pre code {
+  background-color: #000;
+  border: 1px solid #999;
+  font-family: "Source Code Pro";
+  display: block;
+  padding: 20px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.3;
+  -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4;
+  -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none;
+}
+
+.str
+{
+    color: yellow;
+}
+.kwd
+{
+    color: #8470FF;
+}
+.com
+{ color: #32cd32; font-style: italic; }
+.typ
+{
+    color: #6ecbcc;
+}
+.lit
+{
+    color: red;
+}
+.pun
+{
+    color: #e04aff;
+}
+.pln
+{
+    color: #f0f0f0;
+}
+.tag
+{
+    color: #9c9cff;
+}
+.atn
+{
+    color: #dda0dd;
+}
+.atv
+{
+    color: #EC7600;
+}
+.dec
+{
+    color: purple;
+}
+pre.prettyprint
+{
+    border: 0px solid #888;
+}
+ol.linenums
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prettyprint {
+    background: #000;
+}
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
+{
+    color: #555;
+    list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: #111;
+}
+@media print
+{
+    .str
+    {
+        color: #d06;
+    }
+    .kwd
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .com
+    {
+        color: #600;
+        font-style: italic;
+    }
+    .typ
+    {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit
+    {
+        color: #d06;
+    }
+    .pun
+    {
+        color: #440;
+    }
+    .pln
+    {
+        color: #000;
+    }
+    .tag
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn
+    {
+        color: #404;
+    }
+    .atv
+    {
+        color: #060;
+    }
+}
 
 </style>
 <style type="text/css">        
@@ -158,7 +290,7 @@
             <section class="content">
 			<a href="Python-Runda-3.html" style="color:white;">&ltWstecz</a>
             <h1>a6b - Az do granicy</h1>
-            <h1><span style="font-size: medium;"><span style="font-family: Arial;"><big><span style="color: rgb(0, 255, 0);">Status zadania: Pe&#322;na poprawno&#347;&#263;</span><br />
+            <h1><span style="font-size: medium;"><span style="font-family: Arial;"><big><span style="color: rgb(0, 255, 0);">Status zadania: Pe&#322;na poprawno&#347;&#263;</big></span><br />
 </big><span style="color: rgb(255, 153, 0);"><big>Uwagi: Mo&#380;liwe kr&oacute;tsze rozwi&#261;zanie</big></span></span><br />
 </span></h1>
 <br />
@@ -166,13 +298,13 @@
 
 <br />
 Przyk&#322;adowe rozwi&#261;zanie:
-<pre><span class="n">a = int(0)
+<pre class="prettyprint"><code class="language-py">a = int(0)
 suma = int(0)
 while suma <= 2000 and suma > -2000:
 	a = input()
 	a = int(a)
 	suma = suma + a
-print(suma)</span></pre>
+print(suma)</code></pre>
 <br />
 </span></span></big></span></span><br />                
             </section>
