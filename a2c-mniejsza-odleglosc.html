@@ -268,11 +268,11 @@ io::stdin().read_line(&mut b);
 let a: i32 = a.trim().parse().expect("aaa");
 let b: i32 = b.trim().parse().expect("bbb");
 
-if a.abs()<b.abs() {
-println!("{}", a);
+if a.abs()>b.abs() {
+println!("{}", b);
 }
 else {
-println!("{}", b);
+println!("{}", a);
 }
 }</code></pre><br />
 </span></span></big></span></span><br />                
