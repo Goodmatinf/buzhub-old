@@ -1,69 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="pl">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>buzhub - a2e - Dwa warunki</title>
         <meta http-equiv="cleartype" content="on">
         <meta name="msapplication-TileColor" content="#222222">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://theme.webme.com/designs/flexible/css/style.css">
-                <script type="text/javascript">
-        var dateTimeOffset = new Date().getTimezoneOffset();
-        
-        function getElementsByClassNameLocalTimeWrapper() {
-            return document.getElementsByClassName("localtime");
-        }
-        
-        (function () {
-            var onload = function () {
-                var elementArray = new Array();
-                
-                if (document.getElementsByClassName) {
-                    elementArray = getElementsByClassNameLocalTimeWrapper();
-                } else {
-                    var re = new RegExp('(^| )localtime( |$)');
-                    var els = document.getElementsByTagName("*");
-                    for (var i=0,j=els.length; i<j; i++) {
-                        if (re.test(els[i].className))
-                            elementArray.push(els[i]);
-                    }
-                }
-                
-                for (var i = 0; i < elementArray.length; i++) {    
-                    var timeLocal = new Date(parseInt(elementArray[i].getAttribute("data-timestamp")));
-                    var hour = timeLocal.getHours();
-                    var ap = "am";
-                    if (hour > 11) {
-                        ap = "pm";
-                    }
-                    else if (hour > 12) {
-                        hour = hour - 12;
-                    }
-                    
-                    var string = elementArray[i].getAttribute("data-template");
-                    string = string.replace("[Y]", timeLocal.getFullYear());
-                    string = string.replace("[m]", ('0' + (timeLocal.getMonth() + 1)).slice(-2));
-                    string = string.replace("[d]", ('0' + timeLocal.getDate()).slice(-2));
-                    string = string.replace("[H]", ('0' + timeLocal.getHours()).slice(-2));
-                    string = string.replace("[g]", ('0' + hour).slice(-2));
-                    string = string.replace("[i]", ('0' + timeLocal.getMinutes()).slice(-2));
-                    string = string.replace("[s]", ('0' + timeLocal.getSeconds()).slice(-2));
-                    string = string.replace("[a]", ap);
-                    elementArray[i].childNodes[0].nodeValue = string;
-                }
-            };
-            
-            if (window.addEventListener)
-                window.addEventListener("DOMContentLoaded", onload);
-            else if (window.attachEvent)
-                window.attachEvent("onload", onload);
-        })();
-        </script><link rel="icon" href="bzh.png" type="image/x-icon">
+<link rel="icon" href="bzh.png" type="image/x-icon">
 
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link rel="stylesheet" href="theme.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +27,6 @@
 .cc_container .cc_btn:hover, .cc_container .cc_btn:active {
     background-color: rgb(255, 192, 29) !important;
 }
-
-/* originally "left: initial", but this is not supported by IE, and CookieConsent appears left instead of right */ 
 @media screen and (min-width: 500px) {
 .cc_container {
     left: auto !important;
@@ -236,7 +183,11 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
     </head>
     
     <body>
-    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js" integrity="sha512-hM0R3pW9UdoNG9T+oIW5pG9ndvy3OKChFfVTKzjyxNW9xrt6vAbD3OeFWdSLQ8mjKSgd9dSO3RXn3tojQtiA8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-xCfKr8zIONbip3Q1XG/u5x40hoJ0/DtP1bxyMEi0GWzUFoUffE+Dfw1Br8j55RRt9qG7bGKsh+4tSb1CvFHPSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
+   
 <div class="containerMain">
         <div class="container">
             
@@ -280,8 +231,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 
 <li><a href="Kontakt.html">Kontakt</a>
 
-</li>                   
-                    </ul>     
+</li>                    </ul>     
                 </nav>
                                 
              
@@ -290,44 +240,55 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
             <section class="content">
 			<a href="Python-Runda-1.html" style="color:white;">&ltWstecz</a>
             <h1>a2e - Dwa warunki</h1>
-            <b><span style="font-family: Arial;"><big><span style="color: rgb(0, 255, 0);">Status zadania: Pe&#322;na poprawno&#347;&#263;</span></big></span></b>
+            <b><span style="font-family: Arial;"><big><span style="color: rgb(0, 255, 0);">Status zadania: Pełna poprawność</span></big></span></b>
 <br />
 <br />
 <b><span style="font-family: Arial;"><big><span style="color: rgb(0, 255, 0);">Zadanie zweryfikowane przez: Goodmatinf</span></big></span></b>
 <br />
 <br />
 <br />
-Przyk&#322;adowe rozwi&#261;zanie:
-<pre class="prettyprint"><code class="language-py">a=int(input())
+Przykładowe rozwiązanie:
+<pre><code class="language-py">a=int(input())
 b=a%2
 if a>=0 and b==0:
 	print('tak')
 else:
-	print('nie')</code></pre>
-<br />
+	print('nie')</code></pre><br />
 Krótkie rozwiązanie:
-<pre class="prettyprint"><code class="language-py">a=int(input())
+<pre><code class="language-py">a=int(input())
 if a>=0 and a%2==0:
 	print("tak")
 else:
-	print("nie")</code></pre>
-<br />
+	print("nie")</code></pre><br />
+Rozwiązanie w języku Rust:
+<pre><code class="language-rust">use std::io;
+
+fn main() {
+
+let mut a = String::new();
+
+io::stdin().read_line(&mut a);
+
+let a: i32 = a.trim().parse().expect("aaa");
+
+if a%2==0 && a>=0 {
+println!("tak");
+}
+else {
+println!("nie");
+}
+}</code></pre><br />
 </span></span></big></span></span><br />                
             </section>
             <section class="widgets">
             </section>
 
             <footer class="footer"><big>            2021 - Goodmatinf</big>			           
-			<a href="#" title=""><img src="https://counter11.stat.ovh/private/freecounterstat.php?c=xyzfgd8pbea51k43xukhlzxqm8a2nt12" border="0" title="" alt="free counter for website code html"></a>
 			</footer>
             
 
         </div>
 </div>
-<!--We want every page to be scrollable to the bottom and assume that 90px are usually enough-->
 <div style="height:90px">
 
 </div>
-           
-    </body>
-</html>

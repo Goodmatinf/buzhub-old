@@ -10,58 +10,7 @@
         <meta name="msapplication-TileColor" content="#222222">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://theme.webme.com/designs/flexible/css/style.css">
-                <script type="text/javascript">
-        var dateTimeOffset = new Date().getTimezoneOffset();
-        
-        function getElementsByClassNameLocalTimeWrapper() {
-            return document.getElementsByClassName("localtime");
-        }
-        
-        (function () {
-            var onload = function () {
-                var elementArray = new Array();
-                
-                if (document.getElementsByClassName) {
-                    elementArray = getElementsByClassNameLocalTimeWrapper();
-                } else {
-                    var re = new RegExp('(^| )localtime( |$)');
-                    var els = document.getElementsByTagName("*");
-                    for (var i=0,j=els.length; i<j; i++) {
-                        if (re.test(els[i].className))
-                            elementArray.push(els[i]);
-                    }
-                }
-                
-                for (var i = 0; i < elementArray.length; i++) {    
-                    var timeLocal = new Date(parseInt(elementArray[i].getAttribute("data-timestamp")));
-                    var hour = timeLocal.getHours();
-                    var ap = "am";
-                    if (hour > 11) {
-                        ap = "pm";
-                    }
-                    else if (hour > 12) {
-                        hour = hour - 12;
-                    }
-                    
-                    var string = elementArray[i].getAttribute("data-template");
-                    string = string.replace("[Y]", timeLocal.getFullYear());
-                    string = string.replace("[m]", ('0' + (timeLocal.getMonth() + 1)).slice(-2));
-                    string = string.replace("[d]", ('0' + timeLocal.getDate()).slice(-2));
-                    string = string.replace("[H]", ('0' + timeLocal.getHours()).slice(-2));
-                    string = string.replace("[g]", ('0' + hour).slice(-2));
-                    string = string.replace("[i]", ('0' + timeLocal.getMinutes()).slice(-2));
-                    string = string.replace("[s]", ('0' + timeLocal.getSeconds()).slice(-2));
-                    string = string.replace("[a]", ap);
-                    elementArray[i].childNodes[0].nodeValue = string;
-                }
-            };
-            
-            if (window.addEventListener)
-                window.addEventListener("DOMContentLoaded", onload);
-            else if (window.attachEvent)
-                window.attachEvent("onload", onload);
-        })();
-        </script><link rel="icon" href="bzh.png" type="image/x-icon">
+<link rel="icon" href="bzh.png" type="image/x-icon">
 
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
@@ -206,14 +155,13 @@ a:active {
             <section class="widgets">
             </section>
 
-            <footer class="footer"><big>            2021 - Goodmatinf</big>			           
-			<a href="#" title=""><img src="https://counter11.stat.ovh/private/freecounterstat.php?c=xyzfgd8pbea51k43xukhlzxqm8a2nt12" border="0" title="" alt="free counter for website code html"></a>
+            <footer class="footer"><big>            2021 - Goodmatinf</big>
 			</footer>
             
 
         </div>
 </div>
-<!--We want every page to be scrollable to the bottom and assume that 90px are usually enough-->
+
 <div style="height:90px">
 
 </div>
